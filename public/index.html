@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57107021-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-57107021-2');
+  </script>
   <meta charset="utf-8">
   <title>Climate Interactive</title>
   <script src="../socket.io/socket.io.js"></script>
@@ -24,7 +32,13 @@
   <div id="content_header"></div>
   <div id="site_content">
     <div id="content">
-
+      <div>
+        <p>
+          This app is under development! You can find the code
+          <a href="https://github.com/alistaireverett/climatedata">here</a>
+          (and also submit bugs or issues).
+          For now, things might be a little slow and/or unpredictable!
+        </p>
       <div id="tools"></div>
 
       <div id="info"></div>
