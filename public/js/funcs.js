@@ -107,10 +107,13 @@ function drawStripes (data) {
   svg.selectAll('rect').remove()
   // properties for stripes plot
   data = rescale(data)
+  console.log(svg.style('width'))
+  console.log(data.length)
+  console.log(svg.style('width').replace('px', ''))
 
   var barWidth = svg.style('width').replace('px', '') / data.length
   var barHeight = svg.style('height').replace('px', '')
-
+  console.log(barWidth)
   // add a rectangle for every year of data we have
   var stripes = svg.selectAll('rect')
     .data(data)
@@ -118,13 +121,14 @@ function drawStripes (data) {
     .append('rect')
 
   // set the attributes for the stripes
-  var stripeAttributes = stripes.attr('width', barWidth)
-    .style('opacity', 0)
-    .attr('height', 0)
-    //.attr('height', barHeight)
-    .attr('transform', function (d, i) {
-      return 'translate(' + (1 * i * barWidth) + ',0)'
+  var stripeAttributes = stripes
+    .attr('x', function (d, i) {
+      return (1 * i * barWidth)
     })
+    .attr('y', 0)
+    .attr('height', 0)
+    .attr('width', barWidth)
+    .style('opacity', 0)
     .attr('fill', function (d) {
       return d3.interpolateRdBu(1 - d.scaled)
     })

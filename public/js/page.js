@@ -125,14 +125,16 @@ var drawButton = d3.select('#tools')
 // add an svg
 var svg = d3.select('#stripes_container')
   .attr('align', 'center')
-  .classed('svg-container', true)
   .append('svg')
-  .attr('preserveAspectRatio', 'xMinYMin meet')
-  .attr('viewBox', '0 0 880 400')
+  .attr('width', 700)
+  .attr('height', 500)
+  //.attr('preserveAspectRatio', 'xMinYMin meet')
+  //.attr('viewBox', '0 0 880 400')
   // class to make it responsive
-  .classed('svg-content-responsive', true)
+  //.classed('svg-content-responsive', true)
 
 // Define the div for the tooltip
-var div = d3.select('body').append('div')
+var div = d3.select('#tooltip_container')
+  .append('div')
   .attr('class', 'tooltip')
   .style('opacity', 0)

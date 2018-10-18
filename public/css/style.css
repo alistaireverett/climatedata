@@ -91,9 +91,15 @@ ol li
   text-align: center;
   margin: 20px auto;}
 
-#main, #logo, #menubar, #site_content, #footer
+#main
 { margin-left: auto;
-  margin-right: auto;}
+  margin-right: auto;
+}
+
+#logo, #menubar, #site_content, #footer
+{ margin-left: auto;
+  margin-right: auto;
+}
 
 #header
 { background: #1d1d1d;
@@ -223,6 +229,11 @@ ul#menu li a:hover
   padding: 0 0 0 5px;
   float: left;}
 
+#stripes_container
+{
+  padding: 20px 0px 20px 0px;
+}
+
 #content ul
 { margin: 2px 0 22px 0px;}
 
@@ -241,7 +252,9 @@ ul#menu li a:hover
   text-align: center;
   background: #1d1d1d;
   border-top: 2px solid #3b8ec2;
-  color: #FFF;}
+  color: #FFF;
+  bottom:0;
+}
 
 #footer p
 { line-height: 1.7em;
@@ -255,7 +268,7 @@ ul#menu li a:hover
 { color: #FFF;
   text-decoration: none;}
 
-.search
+/* .search
 { color: #5D5D5D;
   border: 1px solid #BBB;
   width: 134px;
@@ -325,7 +338,7 @@ table tr th, table tr td
 table tr td
 { background: #E5E5DB;
   color: #47433F;
-  border-top: 1px solid #FFF;}
+  border-top: 1px solid #FFF;} */
 
 
 div.tooltip {
